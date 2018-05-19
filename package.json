@@ -4,7 +4,7 @@
   "author": "Ragnar Rognstad (http://rognstad.me)",
   "repository": "rognstadragnar/deep-enough-equals",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "source": "src/main.ts",
   "main": "dist/deep-enough-equals.js",
   "module": "dist/deep-enough-equals.esm.js",
@@ -25,8 +25,7 @@
   },
   "peerDependencies": {},
   "scripts": {
-    "release":
-      "npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish",
+    "release": "npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish",
     "bundle:main": "microbundle",
     "dev:main": "microbundle watch --compress false",
     "prepare": "npm run build",
@@ -34,5 +33,8 @@
     "clean": "rimraf dist",
     "test": "mocha -r ts-node/register __tests__/**/*.spec.ts"
   },
-  "files": ["src", "dist"]
+  "files": [
+    "src",
+    "dist"
+  ]
 }
