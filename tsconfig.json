@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "baseUrl": ".",
+    "lib": ["es5", "es6", "dom"],
+    "paths": {
+      "*": ["node_modules/*", "node_modules/@types/*"]
+    }
+  }
+}
