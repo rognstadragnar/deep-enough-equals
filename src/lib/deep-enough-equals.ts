@@ -3,9 +3,9 @@ import { compareMaps } from './compare-maps'
 import { compareObjects } from './compare-objects'
 import { compareSets } from './compare-sets'
 
-export type DeepEqualsFn = (a: any, b: any) => boolean
+export type DeepEnoughEqualsFn = (a: any, b: any) => boolean
 
-function deepEquals(a: any, b: any): boolean {
+function deepEnoughEquals(a: any, b: any): boolean {
   if (a === b) {
     return true
   }
@@ -17,14 +17,14 @@ function deepEquals(a: any, b: any): boolean {
   if (typeof a === 'object') {
     if (Array.isArray(a)) {
       if (Array.isArray(b)) {
-        return compareArrays(a, b, deepEquals)
+        return compareArrays(a, b, deepEnoughEquals)
       }
       return false
     }
 
     if (a instanceof Map) {
       if (b instanceof Map) {
-        return compareMaps(a, b, deepEquals)
+        return compareMaps(a, b, deepEnoughEquals)
       }
       return false
     }
@@ -36,9 +36,9 @@ function deepEquals(a: any, b: any): boolean {
       return false
     }
 
-    return compareObjects(a, b, deepEquals)
+    return compareObjects(a, b, deepEnoughEquals)
   }
   return a === b
 }
 
-export { deepEquals }
+export { deepEnoughEquals }

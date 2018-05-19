@@ -1,5 +1,3 @@
-import { DeepEqualsFn } from './deep-equal'
-
 function compareSets(setA: Set<any>, setB: Set<any>): boolean {
   if (setA.size !== setB.size) {
     return false

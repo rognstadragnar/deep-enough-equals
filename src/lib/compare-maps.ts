@@ -1,9 +1,9 @@
-import { DeepEqualsFn } from './deep-equal'
+import { DeepEnoughEqualsFn } from './deep-enough-equals'
 
 function compareMaps(
   mapA: Map<any, any>,
   mapB: Map<any, any>,
-  deepEquals: DeepEqualsFn
+  compare: DeepEnoughEqualsFn
 ): boolean {
   if (mapA.size !== mapB.size) {
     return false
@@ -18,7 +18,7 @@ function compareMaps(
     const valA = mapA.get(key)
     const valB = mapB.get(key)
 
-    return deepEquals(valA, valB)
+    return compare(valA, valB)
   })
 }
 

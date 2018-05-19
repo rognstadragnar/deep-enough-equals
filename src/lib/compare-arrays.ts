@@ -1,16 +1,16 @@
-import { DeepEqualsFn } from './deep-equal'
+import { DeepEnoughEqualsFn } from './deep-enough-equals'
 
 function compareArrays(
   arrayA: any[],
   arrayB: any[],
-  deepEquals: DeepEqualsFn
+  compare: DeepEnoughEqualsFn
 ): boolean {
   if (arrayA.length !== arrayB.length) {
     return false
   }
 
   const everyItemEqual = arrayA.every((aItem, idx) => {
-    return deepEquals(aItem, arrayB[idx])
+    return compare(aItem, arrayB[idx])
   })
   return everyItemEqual
 }

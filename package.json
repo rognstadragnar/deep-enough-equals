@@ -1,5 +1,5 @@
 {
-  "name": "deep-enough-equals",
+  "name": "@rognstadragnar/deep-enough-equals",
   "description": "Check if to things are equal-ish",
   "author": "Ragnar Rognstad (http://rognstad.me)",
   "repository": "rognstadragnar/deep-enough-equals",

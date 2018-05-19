@@ -1,1 +1,1 @@
-export { deepEquals } from './lib/deep-equal'
+export { deepEnoughEquals } from './lib/deep-enough-equals'
