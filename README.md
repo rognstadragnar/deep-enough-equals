@@ -1,20 +1,26 @@
-# deep-enough-equals
+<p align="center"><strong>deep-enough-equals</strong></p>
+<p align="center"><i>When shallow is too shallow and deep is too deep</i></p>
 
-```sh
-git clone https://github.com/rognstadragnar/deep-enough-equals.git
-rm -rf .git
-git init
-# Update package.json and README to make it your own
-npm i
+## Installation
+
+```
+npm i @rognstadragnar/deep-enough-equals
 ```
 
-or with degit:
+## Usage
 
-```sh
-degit rognstadragnar/deep-enough-equals my-module
-cd my-module
-# Update package.json and README to make it your own
-npm i
+```javascript
+import { deepEnoughEquals } from '@rognstadragnar/deep-enough-equals'
+
+const thingA = { some: ['thing'] }
+const thingB = { some: ['thing'] }
+const thingC = { some: ['other', 'thing'] }
+
+deepEnoughEquals(thingA, thingB)
+// > true
+
+deepEnoughEquals(thingA, thingC)
+// > false
 ```
 
 ## License
