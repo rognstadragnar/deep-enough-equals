@@ -4,7 +4,7 @@
   "author": "Ragnar Rognstad (http://rognstad.me)",
   "repository": "rognstadragnar/deep-enough-equals",
   "license": "MIT",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "source": "src/main.ts",
   "main": "dist/deep-enough-equals.js",
   "module": "dist/deep-enough-equals.esm.js",
